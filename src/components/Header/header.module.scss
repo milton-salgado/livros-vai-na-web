@@ -1,0 +1,81 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.header {
+    @include generate-flex-properties(
+        $justify-content: space-between,
+        $align-items: center
+    );
+
+    padding: 4rem;
+    height: 20vh;
+    background: $primary-gradient;
+
+    .logo {
+        @include generate-flex-properties($gap: 2rem, $align-items: center);
+
+        figure {
+            @include generate-flex-properties(
+                $align-items: center,
+                $justify-content: center
+            );
+
+            img {
+                width: 5rem;
+                height: 5rem;
+
+                @include respond-to(md) {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+
+        h1 {
+            font-size: $font-size-xxl;
+            color: $color-white-1;
+            font-weight: 700;
+
+            @include respond-to(md) {
+                font-size: $font-size-xl;
+            }
+        }
+    }
+
+    nav {
+        ul {
+            @include generate-flex-properties($gap: 5rem);
+
+            li {
+                a {
+                    color: $color-white-1;
+                    text-decoration: none;
+                    font-size: $font-size-md;
+                    transition: 0.3s;
+
+                    &:hover {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-to(md) {
+        padding: 0;
+        height: 15vh;
+
+        @include generate-flex-properties(
+            $flex-direction: column,
+            $align-items: center,
+            $justify-content: space-around,
+            $gap: 1rem
+        );
+    }
+
+    @include respond-to(header-form) {
+        form {
+            display: none;
+        }
+    }
+}

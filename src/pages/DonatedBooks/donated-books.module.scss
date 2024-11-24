@@ -1,0 +1,45 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.main {
+    @include generate-flex-properties(
+        $flex-direction: column,
+        $align-items: center,
+        $gap: 4rem
+    );
+
+    padding: 4rem 8rem;
+    height: 80vh;
+
+    h1 {
+        font-size: $font-size-xxl;
+        color: $color-black-1;
+        text-align: center;
+        font-weight: 700;
+
+        @include respond-to("md") {
+            font-size: $font-size-xl;
+        }
+    }
+
+    .cards {
+        @include generate-flex-properties($gap: 4rem);
+
+        width: 100%;
+
+        @include respond-to(xl) {
+            @include generate-flex-properties($flex-wrap: wrap);
+        }
+
+        @include respond-to(md) {
+            @include generate-flex-properties(
+                $flex-direction: column,
+                $align-items: center
+            );
+        }
+    }
+
+    @include respond-to(xl) {
+        padding: 4rem 2rem;
+    }
+}

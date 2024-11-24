@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.button {
+    border: none;
+    border-radius: 1rem;
+    font-size: $font-size-lg;
+    padding: 1.5rem;
+    background-color: $color-blue-1;
+    transition: transform 0.2s;
+    color: $color-white-1;
+    width: 100%;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}

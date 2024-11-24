@@ -1,0 +1,68 @@
+@import "variables.scss";
+
+@mixin generate-flex-properties(
+    $flex-direction: null,
+    $justify-content: null,
+    $align-items: null,
+    $align-content: null,
+    $flex-wrap: null,
+    $gap: null
+) {
+    display: flex;
+
+    @if $flex-direction != null {
+        flex-direction: $flex-direction;
+    }
+
+    @if $justify-content != null {
+        justify-content: $justify-content;
+    }
+
+    @if $align-items != null {
+        align-items: $align-items;
+    }
+
+    @if $align-content != null {
+        align-content: $align-content;
+    }
+
+    @if $flex-wrap != null {
+        flex-wrap: $flex-wrap;
+    }
+
+    @if $gap != null {
+        gap: $gap;
+    }
+}
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == xs {
+        @media (max-width: $breakpoint-xs) {
+            @content;
+        }
+    } @else if $breakpoint == sm {
+        @media (max-width: $breakpoint-sm) {
+            @content;
+        }
+    } @else if $breakpoint == md {
+        @media (max-width: $breakpoint-md) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media (max-width: $breakpoint-lg) {
+            @content;
+        }
+    } @else if $breakpoint == xl {
+        @media (max-width: $breakpoint-xl) {
+            @content;
+        }
+    } @else if $breakpoint == xxl {
+        @media (max-width: $breakpoint-xxl) {
+            @content;
+        }
+    } @else if $breakpoint == header-form {
+        @media (max-width: $breakpoint-header-form) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+$book-image: url("/assets/images/book-1.png");
+
+.main {
+    @include generate-flex-properties(
+        $flex-direction: column,
+        $justify-content: center,
+        $align-items: center,
+        $gap: 4rem
+    );
+
+    padding: 4rem;
+
+    h1 {
+        font-size: $font-size-xxl;
+        color: $color-black-1;
+        text-align: center;
+
+        @include respond-to("md") {
+            font-size: $font-size-xl;
+        }
+    }
+
+    .form {
+        @include generate-flex-properties(
+            $flex-direction: column,
+            $align-items: center,
+            $gap: 4rem
+        );
+
+        padding: 4rem;
+        border: solid 0.2rem $color-blue-1;
+        border-radius: 2rem;
+        width: 50rem;
+
+        .title {
+            @include generate-flex-properties(
+                $justify-content: space-between,
+                $align-items: center
+            );
+
+            width: 80%;
+
+            figure {
+                @include generate-flex-properties(
+                    $justify-content: center,
+                    $align-items: center
+                );
+
+                img {
+                    width: 6rem;
+                    height: 6rem;
+                }
+            }
+
+            h2 {
+                font-size: $font-size-xl;
+                color: $color-blue-1;
+
+                @include respond-to("md") {
+                    font-size: $font-size-lg;
+                }
+            }
+
+            @include respond-to("sm") {
+                @include generate-flex-properties(
+                    $justify-content: space-around,
+                    $align-items: center
+                );
+
+                width: 100%;
+            }
+        }
+
+        .inputsWrapper {
+            @include generate-flex-properties(
+                $flex-direction: column,
+                $justify-content: center,
+                $gap: 4rem
+            );
+
+            width: 80%;
+
+            @include respond-to("sm") {
+                width: 100%;
+            }
+        }
+
+        .buttonsWrapper {
+            @include generate-flex-properties($justify-content: center);
+
+            width: 50%;
+        }
+
+        @include respond-to("sm") {
+            width: 100%;
+            padding: 2rem;
+        }
+    }
+
+    @include respond-to("sm") {
+        padding: 2rem;
+    }
+}
