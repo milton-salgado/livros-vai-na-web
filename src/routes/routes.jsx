@@ -6,9 +6,12 @@ import Donation from "../pages/Donation";
 const AppRoutes = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/donated-books" element={<DonatedBooks />} />
-            <Route path="/donation" element={<Donation />} />
+            <Route path="/livros-vai-na-web/" element={<Home />} />
+            <Route
+                path="/livros-vai-na-web/donated-books"
+                element={<DonatedBooks />}
+            />
+            <Route path="/livros-vai-na-web/donation" element={<Donation />} />
         </Routes>
     );
 };
