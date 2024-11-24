@@ -37,8 +37,11 @@ Um site (ainda estático) para doação de livros, com o objetivo de facilitar o
 ### 📸 Prévia
 
 <div align="center">
-  <img src="./desktop-home-preview.png" alt="Página inicial no desktop">
-  <img src="./mobile-home-preview.png" alt="Página inicial no mobile">
+  <img src="./public/assets/preview/desktop-home-preview.png" alt="Página inicial no desktop" width="500">
+</div>
+
+<div align="center">
+  <img src="./public/assets/preview/mobile-home-preview.png" alt="Página inicial no mobile" height="500">
 </div>
 
 ## ⚙️ Construção
