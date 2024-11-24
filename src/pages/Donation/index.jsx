@@ -1,5 +1,5 @@
 import DonateInput from "../../components/Input/DonateInput";
-import Book from "/assets/images/book-1.png";
+import Book from "/assets/images/book.png";
 import Button from "../../components/Button";
 
 import style from "./donation.module.scss";
