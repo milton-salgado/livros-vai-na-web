@@ -4,7 +4,7 @@ import style from "./book-card.module.scss";
 
 const BookCard = ({ book }) => {
     return (
-        <div className={style.card}>
+        <article className={style.card}>
             <figure>
                 <img src={book.image.src} alt={book.image.alt} />
             </figure>
@@ -13,7 +13,7 @@ const BookCard = ({ book }) => {
                 <p>{book.author}</p>
                 <p>{book.genre}</p>
             </div>
-        </div>
+        </article>
     );
 };
 

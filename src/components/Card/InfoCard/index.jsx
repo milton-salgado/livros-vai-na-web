@@ -4,12 +4,12 @@ import style from "./info-card.module.scss";
 
 const InfoCard = ({ description, image }) => {
     return (
-        <div className={style.card}>
+        <article className={style.card}>
             <figure>
                 <img src={image.src} alt={image.alt} />
             </figure>
             <p>{description}</p>
-        </div>
+        </article>
     );
 };
 
