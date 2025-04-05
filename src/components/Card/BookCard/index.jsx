@@ -6,7 +6,7 @@ const BookCard = ({ book }) => {
     return (
         <article className={style.card}>
             <figure>
-                <img src={book.image.src} alt={book.image.alt} />
+                <img src={book.image_url} alt={book.title} />
             </figure>
             <div className={style.text}>
                 <p>{book.title}</p>
@@ -22,10 +22,7 @@ BookCard.propTypes = {
         title: PropTypes.string.isRequired,
         author: PropTypes.string.isRequired,
         genre: PropTypes.string.isRequired,
-        image: PropTypes.shape({
-            src: PropTypes.string.isRequired,
-            alt: PropTypes.string.isRequired,
-        }).isRequired,
+        image_url: PropTypes.string.isRequired,
     }).isRequired,
 };
 
