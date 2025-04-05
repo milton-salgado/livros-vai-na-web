@@ -34,7 +34,8 @@
         @include respond-to(md) {
             @include generate-flex-properties(
                 $flex-direction: column,
-                $align-items: center
+                $align-items: center,
+                $flex-wrap: wrap
             );
         }
     }
